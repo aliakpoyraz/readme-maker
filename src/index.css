@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1e293b;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.dark body {
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+.markdown-preview {
+  @apply prose prose-slate max-w-none;
+}
+
+.dark .markdown-preview {
+  @apply prose-invert;
+  color: #c9d1d9;
+}
+
+.markdown-preview h1 {
+  @apply text-3xl font-bold mb-4 text-gray-900 border-b-2 border-gray-200 pb-2;
+}
+
+.dark .markdown-preview h1 {
+  color: #f0f6fc;
+  border-color: #30363d;
+}
+
+.markdown-preview h2 {
+  @apply text-2xl font-semibold mb-3 text-gray-800 border-b border-gray-200 pb-1;
+}
+
+.dark .markdown-preview h2 {
+  color: #f0f6fc;
+  border-color: #30363d;
+}
+
+.markdown-preview h3 {
+  @apply text-xl font-semibold mb-2 text-gray-800;
+}
+
+.dark .markdown-preview h3 {
+  color: #c9d1d9;
+}
+
+.markdown-preview p {
+  @apply mb-4 text-gray-700 leading-relaxed;
+}
+
+.dark .markdown-preview p {
+  color: #c9d1d9;
+}
+
+.markdown-preview ul, .markdown-preview ol {
+  @apply mb-4 ml-6;
+}
+
+.markdown-preview li {
+  @apply mb-1 text-gray-700;
+}
+
+.dark .markdown-preview li {
+  color: #c9d1d9;
+}
+
+.markdown-preview code {
+  @apply bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800;
+}
+
+.dark .markdown-preview code {
+  background: #161b22;
+  color: #c9d1d9;
+}
+
+.markdown-preview pre {
+  @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.dark .markdown-preview pre {
+  background: #161b22;
+  color: #c9d1d9;
+}
+
+.markdown-preview pre code {
+  @apply bg-transparent p-0 text-gray-100;
+}
+
+.dark .markdown-preview pre code {
+  color: #c9d1d9;
+}
+
+.markdown-preview blockquote {
+  @apply border-l-4 border-blue-500 pl-4 italic text-gray-600 mb-4;
+}
+
+.dark .markdown-preview blockquote {
+  border-left-color: #238636;
+  color: #8b949e;
+}
+
+.markdown-preview a {
+  @apply text-blue-600 hover:text-blue-800 underline;
+}
+
+.dark .markdown-preview a {
+  color: #58a6ff;
+  &:hover {
+    color: #79c0ff;
+  }
+}
+
+.markdown-preview table {
+  @apply w-full border-collapse border border-gray-300 mb-4;
+}
+
+.dark .markdown-preview table {
+  border-color: #30363d;
+}
+
+.markdown-preview th, .markdown-preview td {
+  @apply border border-gray-300 px-4 py-2 text-left;
+}
+
+.dark .markdown-preview th, .dark .markdown-preview td {
+  border-color: #30363d;
+}
+
+.markdown-preview th {
+  @apply bg-gray-100 font-semibold;
+}
+
+.dark .markdown-preview th {
+  background: #161b22;
+  color: #c9d1d9;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.dark .custom-scrollbar {
+  scrollbar-color: #30363d #161b22;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #30363d;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-effect {
+  background: #161b22cc;
+  border: 1px solid #30363d;
+}
+
+.button-hover-effect {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.button-hover-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #79c0ff 0%, #a5d6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
